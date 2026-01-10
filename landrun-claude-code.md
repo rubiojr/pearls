@@ -20,19 +20,21 @@ landrun --unrestricted-network --ldd \
 			       --add-exec \
 			       --env TERM \
 			       --env HOME \
+			       --env PATH \
 			       --ro /etc/ssl/certs \
 			       --ro /etc/ssl \
 			       --ro /etc/host.conf \
 			       --ro /etc/nsswitch.conf \
 			       --ro /etc/hosts \
 			       --ro /etc/resolv.conf \
-                   --ro /etc/ld.so.cache \
+			       --ro /etc/ld.so.cache \
 			       --ro /proc \
 			       --ro /dev \
 			       --rox /lib64 \
 			       --rox /lib  \
 			       --rox /bin \
 			       --rox /usr/bin \
+			       --rw /dev/null \
 			       --rw $HOME/.claude \
 			       --rw $HOME/.claude.json \
 			       --rw $HOME/.local/state/claude \
@@ -40,4 +42,5 @@ landrun --unrestricted-network --ldd \
 			       --rw /tmp \
 			       --rwx $PWD \
 			       $HOME/.local/bin/claude
+
 ```
